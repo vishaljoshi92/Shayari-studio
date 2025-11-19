@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "category": "general",
+    "text": "Your smile lights up the darkest days."
+  },
+  {
+    "id": 2,
+    "category": "general",
+    "text": "Memories are the silent song of the heart."
+  },
+  {
+    "id": 3,
+    "category": "general",
+    "text": "Courage grows from small steps taken daily."
+  },
+  {
+    "id": 4,
+    "category": "general",
+    "text": "Some people enter our lives as blessings, others as lessons."
+  },
+  {
+    "id": 5,
+    "category": "general",
+    "text": "Dreams become reality when you persist with hope."
+  },
+  {
+    "id": 6,
+    "category": "general",
+    "text": "In silence, the heart often speaks the loudest."
+  },
+  {
+    "id": 7,
+    "category": "general",
+    "text": "A kind word can change someone's entire day."
+  },
+  {
+    "id": 8,
+    "category": "general",
+    "text": "Hold on to hope, even when it's faint."
+  },
+  {
+    "id": 9,
+    "category": "general",
+    "text": "Love is appreciation, not possession."
+  },
+  {
+    "id": 10,
+    "category": "general",
+    "text": "Life’s simple moments hold the deepest meaning."
+  }
+
+  {
+    "id": "e1",
+    "category": "Love",
+    "text": "You don't love someone for their looks, or their clothes, or for their fancy car, but because they sing a song only you can hear."
+  },
+  {
+    "id": "e2", 
+    "category": "Motivational",
+    "text": "The future belongs to those who believe in the beauty of their dreams."
+  },
+  {
+    "id": "e3",
+    "category": "Friendship",
+    "text": "A real friend is one who walks in when the rest of the world walks out."
+  }
+]
