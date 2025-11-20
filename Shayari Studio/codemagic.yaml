@@ -1,22 +1,41 @@
+name: Shayari Studio Android
 workflows:
   shayari-studio-android:
     name: Shayari Studio Android
     environment:
       groups:
-        - keystore_credentials
+        - android_credentials # You'll create this group in Codemagic UI
       vars:
         PACKAGE_NAME: "com.makeeverything.shayari"
+      android_signing:
+        - shayari_studio_keystore
     scripts:
-      - name: Flutter tests
+      - name: Set up debug keystore
+        script: |
+          keytool -genkey -v \
+          -keystore ~/.android/debug.keystore \
+          -storepass android \
+          -alias androiddebugkey \
+          -keypass android \
+          -keyalg RSA \
+          -keysize 2048 \
+          -validity 10000 \
+          -dname "CN=Android Debug,O=Android,C=US"
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: Run tests
         script: flutter test
       - name: Build Android APK
-        script: flutter build apk --release
+        script: flutter build apk --release --no-tree-shake-icons
       - name: Build Android App Bundle
-        script: flutter build appbundle --release
+        script: flutter build appbundle --release --no-tree-shake-icons
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
       - build/app/outputs/bundle/release/app-release.aab
     publishing:
       email:
         recipients:
-          - user@example.com
+          - user@example.com # Replace with your email
+        notify:
+          success: true
+          failure: true
